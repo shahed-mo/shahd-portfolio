@@ -34,52 +34,93 @@ const Nav = () => {
 
   return (
     <nav
-      className="fixed bottom-6 inset-x-0 mx-auto w-[94%] max-w-2xl z-50"
+      className="
+        fixed
+        bottom-3 sm:bottom-5
+        left-1/2
+        -translate-x-1/2
+        z-50
+        w-[calc(100%-2rem)]
+        max-w-md sm:max-w-xl md:max-w-2xl
+        box-border
+      "
       data-purpose="floating-navbar"
     >
       <div
         className="
-          relative flex items-center justify-between
-          px-3 sm:px-6 py-2.5
-          rounded-full
-          bg-gradient-to-r from-red-700 via-red-600 to-red-800
+          w-full
+          px-2 sm:px-4
+          py-2 sm:py-2.5
+          rounded-2xl sm:rounded-full
+          bg-gradient-to-r
+          from-red-700
+          via-red-600
+          to-red-800
           text-white
-          shadow-2xl shadow-red-950/80
+          shadow-2xl
+          shadow-red-950/70
           border border-red-500/40
           backdrop-blur-md
         "
       >
-        {/* Navigation Links */}
-        <div className="flex items-center justify-around w-full gap-1 sm:gap-4 text-xs font-semibold">
+        <div
+          className="
+            flex
+            items-center
+            justify-around
+            w-full
+            gap-1 sm:gap-2
+          "
+        >
           {navItems.map((item) => (
             <a
               key={item.section}
               href={`#${item.section}`}
               className={`
-                nav-item
-                flex flex-col items-center
+                flex
+                flex-1
+                min-w-0
+                flex-col
+                items-center
+                justify-center
                 gap-0.5
-                px-2 py-1
+                py-1.5 px-1 sm:px-3
                 rounded-xl
                 transition-all
+                duration-300
+
                 ${
                   activeSection === item.section
-                    ? "opacity-100 scale-110 bg-white/15 text-white shadow-lg"
-                    : "opacity-70 hover:opacity-100 hover:scale-110"
+                    ? "opacity-100 scale-100 bg-white/20 text-white shadow-md"
+                    : "opacity-75 hover:opacity-100 hover:scale-105"
                 }
               `}
             >
-              <span className="material-symbols-outlined text-[18px]">
+              <span
+                className="
+                  material-symbols-outlined
+                  text-[18px]
+                  sm:text-[22px]
+                  shrink-0
+                "
+              >
                 {item.icon}
               </span>
 
-              <span className="text-[10px] sm:text-xs">
+              <span
+                className="
+                  text-[10px]
+                  sm:text-xs
+                  font-medium
+                  truncate
+                  max-w-full
+                "
+              >
                 {item.name}
               </span>
             </a>
           ))}
         </div>
-
       </div>
     </nav>
   );
