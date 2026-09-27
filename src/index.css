@@ -1,0 +1,200 @@
+@import "tailwindcss";
+
+html {
+  overflow-x: hidden;
+}
+
+/* ================================
+   Neon Glow Effects
+================================ */
+
+.neon-circle-red {
+  box-shadow:
+    0 0 35px rgba(239, 68, 68, 0.2),
+    inset 0 0 20px rgba(239, 68, 68, 0.1);
+}
+
+.dark .neon-circle-red {
+  box-shadow:
+    0 0 45px rgba(229, 9, 20, 0.28),
+    inset 0 0 35px rgba(229, 9, 20, 0.15);
+}
+.neon-text-red {
+  text-shadow: 0 0 10px rgba(239, 68, 68, 0.25);
+}
+
+.dark .neon-text-red {
+  text-shadow: 0 0 20px rgba(239, 68, 68, 0.5);
+}
+
+/* ================================
+   Main Background
+================================ */
+
+.bg-main-glow {
+  background-color: #f8fafc;
+  background-image:
+    radial-gradient(
+      circle at 20% 40%,
+      rgba(254, 202, 202, 0.45) 0%,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 60%,
+      rgba(254, 226, 226, 0.4) 0%,
+      transparent 45%
+    ),
+    linear-gradient(
+      135deg,
+      #fbfcfd 0%,
+      #f4f5f7 100%
+    );
+
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease;
+
+  font-family: "Inter", sans-serif;
+}
+
+.dark .bg-main-glow {
+  background-color: #12090c;
+  background-image:
+    radial-gradient(
+      circle at 18% 50%,
+      rgba(229, 9, 20, 0.18) 0%,
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 82% 50%,
+      rgba(184, 7, 16, 0.14) 0%,
+      transparent 40%
+    ),
+    linear-gradient(
+      135deg,
+      #130a0d 0%,
+      #1a0c12 50%,
+      #0d0508 100%
+    );
+}
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #110b10;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #dc2626;
+  border-radius: 4px;
+}
+/* ================================
+   Circular Progress
+================================ */
+
+.progress-ring-circle {
+  transition: stroke-dashoffset 0.8s ease-in-out;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+/* animations */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.9s ease-out forwards;
+}
+.about-text {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.9s ease-out;
+}
+
+.about-image {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 0.9s ease-out;
+}
+
+.about-show .about-text,
+.about-show .about-image {
+  opacity: 1;
+  transform: translateX(0);
+}
+.skills-header,
+.skill-item {
+  opacity: 0;
+  transform: translateY(60px);
+}
+
+.skills-circle {
+  stroke-dashoffset: 314.159;
+}
+
+.skills-show .skills-header {
+  animation: skillFadeUp 0.7s ease-out forwards;
+}
+
+.skills-show .skill-item {
+  animation: skillFadeUp 0.7s ease-out forwards;
+  animation-delay: var(--delay);
+}
+
+.skills-show .skill-circle {
+  animation: drawCircle 1.2s ease-out forwards;
+  animation-delay: var(--delay);
+}
+
+@keyframes skillFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes drawCircle {
+  from {
+    stroke-dashoffset: 314.159;
+  }
+}
+.projects-header {
+  opacity: 0;
+  transform: translateY(60px);
+}
+
+.projects-show .projects-header {
+  animation: projectsFadeUp 0.8s ease-out forwards;
+}
+
+@keyframes projectsFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
