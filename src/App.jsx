@@ -8,11 +8,10 @@ import ProjectsSection from "./pages/ProjectsSection/ProjectsSection"
 import Skills from "./pages/SkillsSection/Skills"
 const App = () => {
   return (
-        <div
+    <div
       className="
         bg-main-glow
-        text-gray-900
-        dark:text-gray-100
+        text-gray-100
         transition-colors
         duration-300
         font-sans
@@ -22,17 +21,16 @@ const App = () => {
         pb-32
       "
     >
-      <Header/>
-      <HeroSection/>
-      <AboutSection/>
-      <Skills/>
-      <ProjectsSection/>
-      <ContactSection/>
-      <Footer/>
-      <Nav/>
+      <Header />
+      <HeroSection />
+      <AboutSection />
+      <Skills />
+      <ProjectsSection />
+      <ContactSection />
+      <Footer />
+      <Nav />
     </div>
-    
-  )
-}
+  );
+};
 
 export default App

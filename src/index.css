@@ -1,8 +1,19 @@
 @import "tailwindcss";
+:root {
+  color-scheme: dark;
+}
 
 html {
+  color-scheme: dark;
   overflow-x: hidden;
 }
+
+body {
+  overflow-x: hidden;
+  background-color: #12090c;
+}
+
+
 
 /* ================================
    Neon Glow Effects
@@ -32,6 +43,7 @@ html {
 ================================ */
 
 .bg-main-glow {
+  background-color: #ffffff;
 
   background-image:
     radial-gradient(
@@ -43,11 +55,6 @@ html {
       circle at 80% 60%,
       rgba(254, 226, 226, 0.4) 0%,
       transparent 45%
-    ),
-    linear-gradient(
-      135deg,
-      /* #fbfcfd 0%,
-      #f4f5f7 100% */
     );
 
   transition:
@@ -56,7 +63,6 @@ html {
 
   font-family: "Inter", sans-serif;
 }
-
 .dark .bg-main-glow {
   background-color: #12090c;
   background-image:
