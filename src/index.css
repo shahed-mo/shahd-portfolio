@@ -1,17 +1,22 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 :root {
   color-scheme: dark;
 }
 
 html {
   color-scheme: dark;
+  background-color: #12090c;
   overflow-x: hidden;
 }
 
 body {
-  overflow-x: hidden;
   background-color: #12090c;
+  color: #ffffff;
+  overflow-x: hidden;
 }
+
+
 
 
 
@@ -43,24 +48,12 @@ body {
 ================================ */
 
 .bg-main-glow {
-  background-color: #ffffff;
-
+  background-color: #12090c;
   background-image:
-    radial-gradient(
-      circle at 20% 40%,
-      rgba(254, 202, 202, 0.45) 0%,
-      transparent 40%
-    ),
-    radial-gradient(
-      circle at 80% 60%,
-      rgba(254, 226, 226, 0.4) 0%,
-      transparent 45%
-    );
-
-  transition:
-    background-color 0.4s ease,
-    color 0.4s ease;
-
+    radial-gradient(circle at 18% 50%, rgba(229, 9, 20, 0.18) 0%, transparent 45%),
+    radial-gradient(circle at 82% 50%, rgba(184, 7, 16, 0.14) 0%, transparent 40%),
+    linear-gradient(135deg, #130a0d 0%, #1a0c12 50%, #0d0508 100%);
+  transition: background-color 0.4s ease, color 0.4s ease;
   font-family: "Inter", sans-serif;
 }
 .dark .bg-main-glow {
@@ -201,7 +194,4 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
-}
-body {
-  overflow-x: hidden;
 }
