@@ -6,7 +6,6 @@ import ContactSection from "./pages/ContactSection/ContactSection"
 import HeroSection from "./pages/HeroSection/HeroSection"
 import ProjectsSection from "./pages/ProjectsSection/ProjectsSection"
 import Skills from "./pages/SkillsSection/Skills"
-import { useState,useEffect } from "react"
 const App = () => {
   return (
         <div

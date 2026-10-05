@@ -32,7 +32,7 @@ html {
 ================================ */
 
 .bg-main-glow {
-  background-color: #f8fafc;
+
   background-image:
     radial-gradient(
       circle at 20% 40%,
@@ -46,8 +46,8 @@ html {
     ),
     linear-gradient(
       135deg,
-      #fbfcfd 0%,
-      #f4f5f7 100%
+      /* #fbfcfd 0%,
+      #f4f5f7 100% */
     );
 
   transition:
@@ -82,9 +82,7 @@ html {
   width: 8px;
 }
 
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
+
 
 .dark ::-webkit-scrollbar-track {
   background: #110b10;
