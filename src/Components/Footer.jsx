@@ -38,7 +38,7 @@ const Footer = () => {
 
           {/* Logo / Name */}
           <div>
-            <h2 className="text-2xl font-black text-gray-900 dark:text-white">
+            <h2 className="text-2xl font-black dark:text-white">
               Shahd
               <span className="text-red-500">.</span>
             </h2>
@@ -61,7 +61,7 @@ const Footer = () => {
                   w-10 h-10
                   rounded-full
                   flex items-center justify-center
-                  bg-neutral-100 dark:bg-neutral-900
+                  dark:bg-neutral-900
                   border border-neutral-200 dark:border-neutral-800
                   text-gray-600 dark:text-gray-400
                   hover:text-white

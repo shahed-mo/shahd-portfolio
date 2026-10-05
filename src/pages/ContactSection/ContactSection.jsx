@@ -13,7 +13,7 @@ const ContactSection = () => {
                 </h2>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-                <div className="lg:col-span-7 bg-neutral-100 dark:bg-neutral-900/60 p-8 sm:p-10 rounded-3xl border
+                <div className="lg:col-span-7  dark:bg-neutral-900/60 p-8 sm:p-10 rounded-3xl border
                  border-neutral-200 dark:border-neutral-800/90 shadow-2xl backdrop-blur-sm">
                     <ContactForm/>
                  </div>

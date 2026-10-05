@@ -199,7 +199,7 @@ const ProjectsSection = () => {
                 <div
                   className="h-full min-h-[480px] flex flex-col
                   rounded-3xl overflow-hidden
-                  bg-neutral-100 dark:bg-neutral-900/60
+                  dark:bg-neutral-900/60
                   border border-neutral-200 dark:border-neutral-800/80
                   shadow-xl group
                   hover:border-red-500/50

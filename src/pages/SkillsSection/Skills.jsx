@@ -53,7 +53,7 @@ const Skills = () => {
             <span>Expertise</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-black text-gray-900 dark:text-white tracking-tight">
+          <h2 className="text-3xl sm:text-5xl font-black  dark:text-white tracking-tight">
             My <span className="text-red-500">Skills</span>
           </h2>
 
@@ -106,7 +106,7 @@ const Skills = () => {
                   </svg>
 
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-2xl font-black text-gray-900 dark:text-white tracking-tight">
+                    <span className="text-2xl font-black dark:text-white tracking-tight">
                       {skill.percent}%
                     </span>
                   </div>
